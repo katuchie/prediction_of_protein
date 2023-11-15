@@ -1,5 +1,5 @@
 import streamlit as st
-import stmol
+from stmol import showmol
 import py3Dmol
 import requests
 import biotite.structure.io as bsio
@@ -19,7 +19,7 @@ def render_mol(pdb):
     pdbview.zoomTo()
     pdbview.zoom(2, 800)
     pdbview.spin(True)
-    stmol.showmol(pdbview, height=500, width=800)
+    showmol(pdbview, height=500, width=800)
 
 
 # Protein sequence input
